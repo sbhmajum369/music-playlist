@@ -72,7 +72,7 @@ app.get('*', (req, res) => {
 });
 
 app.listen(4000, () => {
-	console.clear();
+	// console.clear();
     console.log('Listening on port 4000!');
     console.log('Visit localhost:4000');
 });
