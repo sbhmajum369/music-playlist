@@ -2,9 +2,12 @@
   "name": "music-playlist",
   "version": "0.1.0",
   "description": "streaming server",
-  "main": "server.js",
+  "main": "src/server.js",
+  "homepage": "http://sbhmajum369.github.io/music-playlist",
   "scripts": {
-    "dev": "nodemon server.js"
+    "start": "nodemon src/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Subhranil Majumder",
   "license": "MIT",
@@ -12,5 +15,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
