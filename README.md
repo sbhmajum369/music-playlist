@@ -8,9 +8,9 @@ To use this Contact ME.
 
 ## Demo
 Homepage >>
-![alt text](/public/Pic_1.png)
+![alt text](/src/images/Pic_1.png)
 
 Playlist page >>
-![alt text](/public/Pic_2.png)
+![alt text](/src/images/Pic_2.png)
 
 ### More Changes coming soon...
