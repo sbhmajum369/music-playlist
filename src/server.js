@@ -5,8 +5,8 @@ const fs = require('fs');
 const cors = require('cors');
 var path = require('path');
 
-const videoFolder = './assets/';
-const thumbFolder = `${__dirname}/public/`;
+const videoFolder = `${__dirname}/media/`;
+const thumbFolder = `${__dirname}/images/`;
 var mediaFiles = [];
 
 app.use(cors());
