@@ -5,6 +5,11 @@ const fs = require('fs');
 const cors = require('cors');
 var path = require('path');
 
+let port = process.env.PORT;
+if(port == null || port == "") {
+	port = 4000;
+}
+
 const videoFolder = `${__dirname}/media/`;
 const thumbFolder = `${__dirname}/images/`;
 var mediaFiles = [];
@@ -71,9 +76,4 @@ app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
-app.listen(4000, () => {
-	// console.clear();
-    console.log('Listening on port 4000!');
-    console.log('Visit localhost:4000');
-});
-
+app.listen(port, () => console.log(`Listening on ${port}`));
