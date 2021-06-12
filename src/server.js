@@ -22,7 +22,6 @@ fs.readdir(videoFolder, (err, files) => {
 	files.forEach(file => {
 		mediaFiles.push(file.split('.')[0]);
 	});
-	// console.log(mediaFiles);
 });
 
 
@@ -31,7 +30,6 @@ app.get('/video', (req, res) => res.json(mediaFiles));
 
 // Thumbnail pictures
 app.get('/video/:id/poster', (req, res) => {
-	// console.log(thumbFolder+`${req.params.id}`);
 	res.sendFile(thumbFolder+`${req.params.id}.jpg`);
 });
 
@@ -46,11 +44,9 @@ app.get('/video/:id', (req, res) => {
 		const parts = range.replace(/bytes=/, "").split("-")
 		const start = parseInt(parts[0], 10)
 		const end = parts[1] ? parseInt(parts[1], 10) : fileSize-1;
-
 		if(start >= fileSize) {
 		  res.status(416).send('Requested range not satisfiable\n'+start+' >= '+fileSize);
 		}
-
 		const chunksize = (end-start)+1
 		const file = fs.createReadStream(path, {start, end})
 		const head = {
