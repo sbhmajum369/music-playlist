@@ -76,4 +76,10 @@ app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
+// app.listen(4000, () => {
+// 	// console.clear();
+//     console.log('Listening on port 4000!');
+//     console.log('Visit localhost:4000');
+// });
+
 app.listen(port, () => console.log(`Listening on ${port}`));
