@@ -4,7 +4,8 @@ Your personal playlist. You can use it to play music videos in a home environmen
 
 ## Get Started
 
-To use this Contact ME.
+`npm start`
+
 
 ## Demo
 Homepage >>
