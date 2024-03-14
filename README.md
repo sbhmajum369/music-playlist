@@ -14,4 +14,3 @@ Homepage >>
 Playlist page >>
 ![alt text](/src/images/Pic_2.png)
 
-### More Changes coming soon...
